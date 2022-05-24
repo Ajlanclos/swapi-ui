@@ -1,0 +1,38 @@
+.directory {
+    button {
+        height: 35px;
+        width: 35px;
+        background: #222222;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        &.disabled {
+            opacity: .35;
+            cursor:unset;
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding:0;
+        li {
+            padding: .5rem 1rem;
+            margin-bottom: .5rem;
+            background: #222222;
+            cursor: pointer;
+            &:hover {
+                background:#1d1d1d;
+                h4 {
+                    color: greenyellow;
+                }
+            }
+            h4, p {
+                margin: 0;
+            }
+            .ship-model {
+                background: #0a40b5;
+                padding:  .15rem .25rem;
+                font-size: 11px;
+            }
+        }
+    }
+}

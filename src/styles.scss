@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background: #151515;
+    color: #FFFFFF;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+select {
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;       /* Remove default arrow */
+    background: #222222;
+    height: 35px;
+    border: none;
+    color: #FFFFFF;
+    padding: .5rem;
+    &:focus-visible {
+        outline: none;
+    }
+ }

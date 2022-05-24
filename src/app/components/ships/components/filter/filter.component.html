@@ -1,0 +1,9 @@
+<form fxLayout="row" fxLayoutAlign="flex-end center" fxLayoutGap="10px">
+    <p>Search By Model</p>
+    <select [(ngModel)]="manufacturer" name="manufacturer" (change)="onMfChange(manufacturer)">
+        <option selected value="">All Models</option>
+        <option *ngFor="let mf of manufacturers">
+            {{mf}}
+        </option>
+    </select>
+</form>

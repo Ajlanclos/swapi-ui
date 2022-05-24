@@ -1,0 +1,10 @@
+<div class="main-nav" fxLayout="column" fxLayoutAlign="space-between flex-end">
+    <div fxFlex="15" fxLayoutAlign="center center">
+        <img src="../../../assets/images/swapi-logo.png" />
+    </div>
+    <ul fxFlex fxLayout="column" fxLayoutAlign="center flex-end">
+        <li fxLayoutAlign="center center" *ngFor="let link of links" [routerLink]="['/' + link.path]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            {{link.data!['label']}}
+        </li>
+    </ul>
+</div>
