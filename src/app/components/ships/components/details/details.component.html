@@ -1,0 +1,39 @@
+<div class="details-container" *ngIf="details">
+    <div>
+        <h4 class="section-title">Overview</h4>
+        <ul>
+            <li><span>Name: </span> {{details.name}}</li>
+            <li><span>Model: </span> {{details.model}}</li>
+            <li><span>Class: </span> {{details.starship_class | titlecase}}</li>
+            <li><span>Manufacturer: </span> {{details.manufacturer}}</li>
+            <li><span>Cost: </span> {{details.cost_in_credits | number: '1.0'}} credits</li>
+        </ul>
+    </div>
+    <div>
+        <h4 class="section-title">Stats</h4>
+        <ul>
+            <li><span>Passengers: </span> {{details.passengers}}</li>
+            <li><span>Crew: </span> {{details.crew}}</li>
+            <li><span>Consumables: </span> {{details.consumables}}</li>
+            <li><span>Cargo Capacity: </span> {{details.cargo_capacity | number: '1.0'}}</li>
+            <li><span>Length: </span> {{details.length}}</li>
+            <li><span>Hyperdrive Rating: </span> {{details.hyperdrive_rating}}</li>
+            <li><span>Atmospheric Speed: </span> {{details.max_atmosphering_speed}}</li>
+        </ul>
+    </div>
+    <div>
+        <h4 class="section-title">Pilots</h4>
+        <ul>
+            <li *ngIf="!details.pilots.length">No Pilots Listed</li>
+            <li *ngFor="let pilot of details.pilots">
+                <span>Links: </span> {{pilot}}</li>
+        </ul>
+    </div>
+    <div>
+        <h4 class="section-title">Movie Appearances</h4>
+        <ul>
+            <li *ngFor="let title of details.films">
+                <span>Links: </span> {{title}}</li>
+        </ul>
+    </div>
+</div>

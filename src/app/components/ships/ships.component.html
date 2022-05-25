@@ -7,13 +7,17 @@
         <app-filter (mf)="filterByManufacturer($event)" [manufacturers]="manufacturers"></app-filter>
     </div>
     
-    <ul>
-        <li *ngFor="let ship of ships" fxLayoutAlign="space-between center">
-            <div>
-                <h4>{{ship.name}}</h4>
-                <p>{{ship.manufacturer}}</p>
-            </div>
-            <p class="ship-model">{{ship.model}}</p>
-        </li>
-    </ul>
+    <div fxLayout="row">
+        <ul fxFlex>
+            <li *ngFor="let ship of ships; let i = index;" fxLayoutAlign="space-between center" (click)="onShipSelect(ship, i)" [ngClass]="{'active': selectedIdx === i}">
+                <div>
+                    <h4>{{ship.name}}</h4>
+                    <p>{{ship.manufacturer}}</p>
+                </div>
+                <p class="ship-model">{{ship.model}}</p>
+            </li>
+        </ul>
+        <app-details fxFlex="25" *ngIf="selectedShip" [details]="selectedShip"></app-details>
+    </div>
+    
 </div>

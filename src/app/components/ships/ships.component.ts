@@ -11,9 +11,11 @@ import { SwapiService } from 'src/app/_core/services/swapi.service';
 })
 export class ShipsComponent implements OnInit, OnDestroy {
   public ships: Ship[] = [];
+  public selectedShip: Ship;
   public manufacturers: string[];
   public nextPage: string;
   public lastPage: string;
+  public selectedIdx: number;
 
   private end$: Subject<any> = new Subject();
 
@@ -65,6 +67,11 @@ export class ShipsComponent implements OnInit, OnDestroy {
         this.lastPage = res.previous;
       }
     });
+  }
+
+  onShipSelect(ship: Ship, idx: number) {
+    this.selectedShip = ship;
+    this.selectedIdx = idx;
   }
 
 }

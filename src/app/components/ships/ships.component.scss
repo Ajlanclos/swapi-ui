@@ -25,6 +25,12 @@
                     color: greenyellow;
                 }
             }
+            &.active {
+                background:#1d1d1d;
+                h4 {
+                    color: greenyellow;
+                }
+            }
             h4, p {
                 margin: 0;
             }

@@ -1,0 +1,20 @@
+.details-container {
+    margin: 1rem;
+    padding: .5rem 1rem;
+    background: #101010;
+    .section-title {
+        margin: .25rem 0;
+        padding-left: 1rem;
+        border-left: 2px solid greenyellow;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            color: #818181;
+            span {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
