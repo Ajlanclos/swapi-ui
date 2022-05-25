@@ -8,6 +8,8 @@ import { MainNavComponent } from './_shared/main-nav/main-nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShipsModule } from './components/ships/ships.module';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ShipsModule } from './components/ships/ships.module';
     FlexLayoutModule,
     FontAwesomeModule,
     HttpClientModule,
-    ShipsModule
+    ShipsModule,
+    LoadingBarHttpClientModule,
+    LoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
