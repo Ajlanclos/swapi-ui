@@ -32,6 +32,7 @@
     <div>
         <h4 class="section-title">Movie Appearances</h4>
         <ul>
+            <li *ngIf="!details.films.length">No Movies Listed</li>
             <li *ngFor="let title of details.films">
                 <span>Links: </span> {{title}}</li>
         </ul>
