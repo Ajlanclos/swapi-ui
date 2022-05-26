@@ -1,0 +1,14 @@
+.about-container {
+    background: #222222;
+    padding: 1rem;
+    p {
+        margin: 0;
+        a {
+            color: greenyellow;
+            text-decoration: none;
+        }
+        &.about-footer {
+            margin-top: 5rem;
+        }
+    }
+}
